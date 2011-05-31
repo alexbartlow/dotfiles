@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/test/Projects/rsam'
+let g:netrw_dirhist_2='/home/test/Projects/rsam/spec/models/access_mailer'
+let g:netrw_dirhist_3='/home/test/Projects/rsam/vendor/plugins/activerecord-oci-adapter-1.0.0'
+let g:netrw_dirhist_4='/home/test/Projects/rsam'
+let g:netrw_dirhist_5='/home/test/Projects/rsam/vendor/plugins'
+let g:netrw_dirhist_6='/home/test/Projects/rsam'
+let g:netrw_dirhist_7='/etc/nagios3/conf.d'
+let g:netrw_dirhist_8='/home/test/Projects/nagios_plugins'
+let g:netrw_dirhist_9='/home/test/Projects/rsam'
