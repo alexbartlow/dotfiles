@@ -5,4 +5,5 @@ git_nicelog () {
 }
 
 PATH="/usr/local/bin:/usr/local/Cellar/ruby/1.9.2-p290/bin/:$PATH"
-source .bashrc
+source ~/.bashrc
+[[ -f "$HOME/.site_profile" ]] && source ~/.site_profile
