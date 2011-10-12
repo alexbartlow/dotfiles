@@ -59,8 +59,7 @@ fi
 . ~/.bash_aliases
 
 if [ "$color_prompt" = yes ]; then
-  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb`\e[m \e[1;34m`$RVM && rvm current`\e[m\n'
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb`\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -114,9 +113,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export HTTP_PROXY="http://proxy.jpmchase.net:8443"
-export http_proxy="$HTTP_PROXY"
-export ORACLE_HOME="/usr/lib/oracle/xe/app/oracle/product/10.2.0/client"
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export PATH="$JAVA_HOME/bin:$HOME/bin:$PATH"
 
