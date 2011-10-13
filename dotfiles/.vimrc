@@ -1,4 +1,4 @@
-set guifont="Meslo LG M DZ 10"
+set guifont=Menlo:h13
 
 " Use two space tabs
 set ai
