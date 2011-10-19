@@ -1,4 +1,3 @@
-set guifont=Menlo:h13
 
 " Use two space tabs
 set ai
