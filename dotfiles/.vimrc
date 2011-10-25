@@ -12,6 +12,7 @@ set incsearch
 set guioptions-=T
 
 let mapleader = ","
+let loaded_matchparen = 1
 
 set wildmenu
 set wildmode=list:longest
@@ -23,7 +24,7 @@ set smartcase
 set ruler
 set backspace=indent,eol,start
 set guicursor=a:blinkon0
-syntax on
+set nocursorline
 filetype plugin indent on
 set wildignore=vendor/**,development/**
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
