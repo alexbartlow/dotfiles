@@ -1,5 +1,5 @@
 accountsservice					install
-ack-grep					install
+ack-grep					deinstall
 acl						install
 acpi-support					install
 acpid						install
