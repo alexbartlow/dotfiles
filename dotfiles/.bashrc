@@ -60,7 +60,7 @@ fi
 . ~/.bash_aliases
 
 if [ "$color_prompt" = yes ]; then
-  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb`\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
+  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb``gs`\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
