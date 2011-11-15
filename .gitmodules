@@ -1,3 +1,0 @@
-[submodule "dotfiles/.vim/bundle/vim-css-color"]
-	path = dotfiles/.vim/bundle/vim-css-color
-	url = https://github.com/ap/vim-css-color.git
