@@ -69,6 +69,15 @@ colorscheme all_hallows_eve
 
 autocmd BufWinLeave * call clearmatches()
 
+if exists(":Tabularize")
+  nmap <Leader>as :Tabularize /\s\S\+<CR>
+  vmap <Leader>as :Tabularize /\s\S\+<CR>
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
 call pathogen#infect()
 
 map ,<C-b> :ConqueTermSplit bash<CR>
