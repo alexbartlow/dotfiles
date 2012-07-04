@@ -64,6 +64,10 @@ map <C-/> ://<CR>
 
 let g:ctrlp_map = '<c-t>'
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
 nnoremap Y y$
 map <Leader>I gg=G``<cr>
 
