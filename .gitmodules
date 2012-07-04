@@ -1,0 +1,3 @@
+[submodule "dotfiles/.vim/bundle/ctrlp.vim"]
+	path = dotfiles/.vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
