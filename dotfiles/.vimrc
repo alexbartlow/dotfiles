@@ -26,8 +26,10 @@ set backspace=indent,eol,start
 set guicursor=a:blinkon0
 set nocursorline
 filetype plugin indent on
-set wildignore=vendor/**,development/**
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
+
+au BufRead,BufNewFile {*.md,*.txt} set wrap linebreak nolist tw=72
+au BufRead,BufNewFile {*.md,*.txt} setlocal spell spelllang=en_us
 
 map <Leader>1 :tabn 1<CR>
 map <Leader>2 :tabn 2<CR>
@@ -69,15 +71,18 @@ colorscheme all_hallows_eve
 
 autocmd BufWinLeave * call clearmatches()
 
+call pathogen#infect()
+
 if exists(":Tabularize")
   nmap <Leader>as :Tabularize /\s\S\+<CR>
   vmap <Leader>as :Tabularize /\s\S\+<CR>
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a= :Tabularize /=><CR>
+  vmap <Leader>a= :Tabularize /=><CR>
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-call pathogen#infect()
-
 map ,<C-b> :ConqueTermSplit bash<CR>
+
+au BufNewFile,BufRead *.thor set filetype=ruby
+au BufNewFile,BufRead *.sass set filetype=css
