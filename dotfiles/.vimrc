@@ -26,7 +26,12 @@ set backspace=indent,eol,start
 set guicursor=a:blinkon0
 set nocursorline
 filetype plugin indent on
+set wildignore=vendor/**,development/**,coverage/**
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
+au BufRead,BufNewFile {*.sass} set ft=text
+
+au BufRead,BufNewFile {*.md,*.txt} set wrap linebreak nolist tw=72
+au BufRead,BufNewFile {*.md,*.txt} setlocal spell spelllang=en_us
 
 map <Leader>1 :tabn 1<CR>
 map <Leader>2 :tabn 2<CR>
@@ -48,14 +53,20 @@ map! <D-7> <C-O>:tabn 7<CR>
 map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
 
-map <F5> :CommandTFlush<CR>
 map <Leader>, :NERDTreeToggle<CR>
+map <Leader>t :CtrlP<CR>
 imap jf <ESC>
 map! ,e <ESC>f>a
 map ,e f>
 map <C-q> :q<CR>
 map <Leader><F5> :source ~/.vimrc<CR>
 map <C-/> ://<CR>
+
+let g:ctrlp_map = '<c-t>'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 nnoremap Y y$
 map <Leader>I gg=G``<cr>

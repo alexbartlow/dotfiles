@@ -1,5 +1,0 @@
-*.o
-*.so
-Makefile
-mkmf.log
-*.o\n*.log\nMakefile\n*.bundle
