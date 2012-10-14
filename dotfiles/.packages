@@ -223,7 +223,6 @@ gir1.2-wnck-3.0					install
 git						install
 git-core					install
 git-man						install
-gitk						install
 gksu						install
 glib-networking					install
 gnome-accessibility-themes			install
@@ -1408,7 +1407,6 @@ pulseaudio-module-bluetooth			install
 pulseaudio-module-gconf				install
 pulseaudio-module-x11				install
 pulseaudio-utils				install
-pv						install
 pxljr						install
 python						install
 python-appindicator				install
@@ -1471,7 +1469,6 @@ python-pycurl					install
 python-pygments					install
 python-pyinotify				install
 python-serial					install
-python-setuptools				install
 python-simplejson				install
 python-smbc					install
 python-software-properties			install
@@ -1553,7 +1550,6 @@ system-config-printer-udev			install
 sysv-rc						install
 sysvinit-utils					install
 tar						install
-tcl						install
 tcl8.5						install
 tcpd						install
 tcpdump						install
@@ -1570,7 +1566,6 @@ thunderbird					install
 thunderbird-globalmenu				install
 thunderbird-gnome-support			install
 time						install
-tk						install
 tk8.5						install
 tmux						install
 tomboy						install
@@ -1693,7 +1688,6 @@ x11proto-xext-dev				install
 x11proto-xinerama-dev				install
 xauth						install
 xbitmaps					install
-xclip						install
 xcursor-themes					install
 xdg-user-dirs					install
 xdg-user-dirs-gtk				install

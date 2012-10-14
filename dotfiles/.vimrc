@@ -6,6 +6,7 @@ set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 set number numberwidth=2
 set showmatch
 set incsearch
+set hlsearch
 
 "set virtualedit=all
 
@@ -28,10 +29,9 @@ set nocursorline
 filetype plugin indent on
 set wildignore=vendor/**,development/**,coverage/**
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
-au BufRead,BufNewFile {*.sass} set ft=text
 
-au BufRead,BufNewFile {*.md,*.txt} set wrap linebreak nolist tw=72
-au BufRead,BufNewFile {*.md,*.txt} setlocal spell spelllang=en_us
+au BufRead,BufNewFile {*.md,*.txt,*.asc} set wrap linebreak nolist tw=72
+au BufRead,BufNewFile {*.md,*.txt,*.asc} setlocal spell spelllang=en_us
 
 map <Leader>1 :tabn 1<CR>
 map <Leader>2 :tabn 2<CR>
@@ -59,6 +59,7 @@ imap jf <ESC>
 map! ,e <ESC>f>a
 map ,e f>
 map <C-q> :q<CR>
+map <F5> :CtrlPClearAllCaches<CR>
 map <Leader><F5> :source ~/.vimrc<CR>
 map <C-/> ://<CR>
 
@@ -93,4 +94,3 @@ endif
 map ,<C-b> :ConqueTermSplit bash<CR>
 
 au BufNewFile,BufRead *.thor set filetype=ruby
-au BufNewFile,BufRead *.sass set filetype=css
