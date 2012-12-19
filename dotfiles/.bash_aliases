@@ -6,3 +6,4 @@ alias 'gs'='git status --porcelain 2> /dev/null | sort | awk "{print \$1}" | uni
 
 alias 'pull'='git pull origin HEAD'
 alias 'push'='git push origin HEAD'
+alias 'fucking_stage'='git push origin HEAD && git push cl_staging HEAD:master'

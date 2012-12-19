@@ -60,6 +60,8 @@ map! ,e <ESC>f>a
 map ,e f>
 map <C-q> :q<CR>
 map <F5> :CtrlPClearAllCaches<CR>
+map <F4> :TlistToggle<CR>
+map <Leader><F4> :TlistUpdate<CR>
 map <Leader><F5> :source ~/.vimrc<CR>
 map <C-/> ://<CR>
 
