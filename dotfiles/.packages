@@ -5,6 +5,7 @@ acpid						install
 adduser						install
 adium-theme-ubuntu				install
 aisleriot					install
+alex						install
 alsa-base					install
 alsa-utils					install
 anacron						install
@@ -19,6 +20,7 @@ apport						install
 apport-gtk					install
 apport-symptoms					install
 apt						install
+apt-file					install
 apt-transport-https				install
 apt-utils					install
 apt-xapian-index				install
@@ -27,6 +29,7 @@ aptdaemon-data					install
 aptitude					install
 apturl						install
 apturl-common					install
+asciidoc					install
 aspell						install
 aspell-en					install
 at						install
@@ -69,6 +72,7 @@ bzip2						install
 c2esp						install
 ca-certificates					install
 ca-certificates-java				install
+cabal-install					install
 checkbox					install
 checkbox-gtk					install
 chromium-browser				install
@@ -101,6 +105,7 @@ cups-driver-gutenprint				install
 cups-ppdc					install
 curl						install
 dash						install
+dblatex						install
 dbus						install
 dbus-x11					install
 dc						install
@@ -122,7 +127,10 @@ dnsmasq						install
 dnsmasq-base					install
 dnsutils					install
 doc-base					install
+docbook-dsssl					install
+docbook-utils					install
 docbook-xml					install
+docbook-xsl					install
 dosfstools					install
 dpkg						install
 dpkg-dev					install
@@ -162,6 +170,9 @@ foo2zjs						install
 foomatic-db-compressed-ppds			install
 foomatic-db-engine				install
 foomatic-filters				install
+foreman						install
+freeglut3					install
+freeglut3-dev					install
 freepats					install
 friendly-recovery				install
 ftp						install
@@ -187,6 +198,8 @@ geoclue-ubuntu-geoip				install
 geoip-database					install
 gettext						install
 gettext-base					install
+ghc						install
+ghc-haddock					install
 ghostscript					install
 ghostscript-cups				install
 ghostscript-x					install
@@ -223,6 +236,7 @@ gir1.2-wnck-3.0					install
 git						install
 git-core					install
 git-man						install
+gitk						install
 gksu						install
 glib-networking					install
 gnome-accessibility-themes			install
@@ -263,6 +277,7 @@ gnome-user-share				install
 gnome-utils-common				install
 gnomine						install
 gnupg						install
+gparted						install
 gpgv						install
 gpick						install
 graphviz					install
@@ -277,6 +292,7 @@ grub2-common					install
 gs-cjk-resource					install
 gsettings-desktop-schemas			install
 gsfonts						install
+gsfonts-x11					install
 gstreamer0.10-alsa				install
 gstreamer0.10-ffmpeg				install
 gstreamer0.10-fluendo-mp3			install
@@ -307,7 +323,11 @@ gwibber-service-facebook			install
 gwibber-service-identica			install
 gwibber-service-twitter				install
 gzip						install
+happy						install
+haskell-platform				install
 hdparm						install
+heroku						install
+heroku-toolbelt					install
 hicolor-icon-theme				install
 hostname					install
 hpijs						install
@@ -325,11 +345,7 @@ ibus-pinyin					install
 ibus-pinyin-db-android				install
 ibus-table					install
 icc-profiles-free				install
-icedtea-6-jre-cacao				install
-icedtea-6-jre-jamvm				install
-icedtea-netx					install
-icedtea-plugin					install
-icedtea6-plugin					install
+icedtea-netx					deinstall
 ifupdown					install
 im-switch					install
 imagemagick					install
@@ -359,6 +375,7 @@ irqbalance					install
 isc-dhcp-client					install
 isc-dhcp-common					install
 iso-codes					install
+jadetex						install
 java-common					install
 jockey-common					install
 jockey-gtk					install
@@ -367,6 +384,7 @@ kerneloops-daemon				install
 keyboard-configuration				install
 klibc-utils					install
 krb5-multidev					install
+lacheck						install
 language-pack-en				install
 language-pack-en-base				install
 language-pack-gnome-en				install
@@ -374,14 +392,15 @@ language-pack-gnome-en-base			install
 language-selector-common			install
 language-selector-gnome				install
 laptop-detect					install
+latex-beamer					install
+latex-xcolor					install
 launchpad-integration				install
 less						install
 lftp						install
 liba52-0.7.4					install
 libaa1						install
 libaa1-dev					install
-libaccess-bridge-java				install
-libaccess-bridge-java-jni			install
+libaccess-bridge-java-jni			deinstall
 libaccountsservice0				install
 libacl1						install
 libalgorithm-diff-perl				install
@@ -393,6 +412,7 @@ libappindicator3-1				install
 libapr1						install
 libaprutil1					install
 libapt-inst1.3					install
+libapt-pkg-perl					install
 libapt-pkg4.11					install
 libarchive1					install
 libasound2					install
@@ -432,6 +452,8 @@ libbamf3-0					install
 libbind9-60					install
 libblkid1					install
 libbluetooth3					install
+libbonobo2-0					install
+libbonobo2-common				install
 libboost-all-dev				install
 libboost-date-time-dev				install
 libboost-date-time1.46-dev			install
@@ -486,6 +508,7 @@ libboost-wave1.46.1				install
 libboost1.46-dev				install
 libbrasero-media3-1				install
 libbrlapi0.5					install
+libbsd-dev					install
 libbsd0						install
 libburn4					install
 libbz2-1.0					install
@@ -529,6 +552,7 @@ libcolamd2.7.1					install
 libcolord1					install
 libcomerr2					install
 libcompizconfig0				install
+libconfig-file-perl				install
 libcroco3					install
 libcrypt-passwdmd5-perl				install
 libcups2					install
@@ -607,6 +631,7 @@ libexiv2-10					install
 libexpat1					install
 libexpat1-dev					install
 libfaad2					install
+libffi-dev					install
 libffi6						install
 libfftw3-3					install
 libfile-basedir-perl				install
@@ -651,6 +676,29 @@ libgegl-0.0-0					install
 libgeoclue0					install
 libgeoip1					install
 libgexiv2-0					install
+libghc-cgi-dev					install
+libghc-deepseq-dev				install
+libghc-fgl-dev					install
+libghc-glut-dev					install
+libghc-haskell-src-dev				install
+libghc-html-dev					install
+libghc-http-dev					install
+libghc-hunit-dev				install
+libghc-mtl-dev					install
+libghc-network-dev				install
+libghc-opengl-dev				install
+libghc-parallel-dev				install
+libghc-parsec3-dev				install
+libghc-quickcheck2-dev				install
+libghc-regex-base-dev				install
+libghc-regex-compat-dev				install
+libghc-regex-posix-dev				install
+libghc-stm-dev					install
+libghc-syb-dev					install
+libghc-text-dev					install
+libghc-transformers-dev				install
+libghc-xhtml-dev				install
+libghc-zlib-dev					install
 libgif4						install
 libgimp2.0					install
 libgirepository-1.0-1				install
@@ -674,7 +722,9 @@ libglu1-mesa-dev				install
 libgme0						install
 libgmime-2.4-2					install
 libgmime2.4-cil					install
+libgmp-dev					install
 libgmp10					install
+libgmpxx4ldbl					install
 libgnome-bluetooth8				install
 libgnome-control-center1			install
 libgnome-desktop-3-2				install
@@ -682,6 +732,7 @@ libgnome-keyring0				install
 libgnome-media-profiles-3.0-0			install
 libgnome-menu-3-0				install
 libgnome-menu2					install
+libgnome2-0					install
 libgnome2-common				install
 libgnomekbd-common				install
 libgnomekbd7					install
@@ -726,6 +777,7 @@ libgtk2.0-bin					install
 libgtk2.0-cil					install
 libgtk2.0-common				install
 libgtk2.0-dev					install
+libgtkmm-2.4-1c2a				install
 libgtkmm-3.0-1					install
 libgtksourceview-3.0-0				install
 libgtksourceview-3.0-common			install
@@ -813,6 +865,7 @@ liblcms2-2					install
 libldap-2.4-2					install
 liblightdm-gobject-1-0				install
 liblircclient0					install
+liblist-moreutils-perl				install
 libllvm2.9					install
 liblocale-gettext-perl				install
 liblockfile1					install
@@ -922,7 +975,9 @@ libopenobex1					install
 libopenspc0					install
 liborbit2					install
 liborc-0.4-0					install
+libosp5						install
 libossp-uuid16					install
+libostyle1c2					install
 liboverlay-scrollbar-0.2-0			install
 liboverlay-scrollbar3-0.2-0			install
 libp11-kit0					install
@@ -1017,6 +1072,7 @@ libreadline5					install
 libreadline6					install
 libreadline6-dev				install
 librecode0					install
+libregexp-assemble-perl				install
 libreoffice-base-core				install
 libreoffice-calc				install
 libreoffice-common				install
@@ -1037,6 +1093,7 @@ librsvg2-dev					install
 librsync1					install
 librtmp0					install
 libruby1.8					install
+libruby1.9.1					install
 libsamplerate0					install
 libsane						install
 libsane-hpaio					install
@@ -1053,6 +1110,7 @@ libsdl1.2debian-all				install
 libsdl1.2debian-pulseaudio			deinstall
 libselinux1					install
 libsensors4					install
+libsgmls-perl					install
 libsgutils2-2					install
 libshout3					install
 libsidplay1					install
@@ -1073,6 +1131,7 @@ libsoundtouch0					install
 libsoup-gnome2.4-1				install
 libsoup2.4-1					install
 libsoup2.4-dev					install
+libsp1c2					install
 libspectre1					install
 libspeechd2					install
 libspeex1					install
@@ -1101,6 +1160,7 @@ libtaglib2.0-cil				install
 libtalloc2					install
 libtasn1-3					install
 libtcltk-ruby1.8				install
+libtcmalloc-minimal0				install
 libtdb1						install
 libtelepathy-farsight0				install
 libtelepathy-glib0				install
@@ -1230,6 +1290,8 @@ libxklavier16					install
 libxml2						install
 libxml2-dev					install
 libxml2-utils					install
+libxmu-dev					install
+libxmu-headers					install
 libxmu6						install
 libxmuu1					install
 libxp6						install
@@ -1274,6 +1336,7 @@ linux-image-3.0.0-17-generic			install
 linux-image-generic				install
 linux-libc-dev					install
 linux-sound-base				install
+lmodern						install
 locales						install
 lockfile-progs					install
 login						install
@@ -1284,6 +1347,9 @@ lsb-release					install
 lshw						install
 lsof						install
 ltrace						install
+luatex						install
+lynx						install
+lynx-cur					install
 lzma						install
 m4						install
 make						install
@@ -1300,6 +1366,9 @@ metacity					install
 metacity-common					install
 mime-support					install
 min12xxw					install
+mingw32						install
+mingw32-binutils				install
+mingw32-runtime					install
 mlocate						install
 mobile-broadband-provider-info			install
 modemmanager					install
@@ -1338,11 +1407,10 @@ network-manager					install
 network-manager-gnome				install
 network-manager-pptp				install
 network-manager-pptp-gnome			install
-nodejs						install
-nodejs-dev					install
+nodejs-dev					deinstall
 notify-osd					install
 notify-osd-icons				install
-npm						install
+npm						deinstall
 ntfs-3g						install
 ntpdate						install
 nux-tools					install
@@ -1350,11 +1418,15 @@ nvidia-common					install
 obex-data-server				install
 obexd-client					install
 ocaml-base-nox					install
+odbcinst					install
+odbcinst1debian2				install
 onboard						install
 oneconf						install
-openjdk-6-jre					install
-openjdk-6-jre-headless				install
-openjdk-6-jre-lib				install
+openjade					install
+openjdk-6-jre					deinstall
+openjdk-6-jre-headless				deinstall
+openjdk-7-jre					deinstall
+openjdk-7-jre-headless				deinstall
 openmpi-common					install
 openoffice.org-hyphenation			install
 openprinting-ppds				install
@@ -1371,6 +1443,7 @@ pcmciautils					install
 perl						install
 perl-base					install
 perl-modules					install
+pgf						install
 pkg-config					install
 plymouth					install
 plymouth-label					install
@@ -1397,8 +1470,11 @@ ppp						install
 pppconfig					install
 pppoeconf					install
 pptp-linux					install
+preview-latex-style				install
 procps						install
+prosper						install
 protobuf-compiler				install
+ps2eps						install
 psmisc						install
 ptouch-driver					install
 pulseaudio					install
@@ -1469,6 +1545,7 @@ python-pycurl					install
 python-pygments					install
 python-pyinotify				install
 python-serial					install
+python-setuptools				install
 python-simplejson				install
 python-smbc					install
 python-software-properties			install
@@ -1510,10 +1587,8 @@ rlwrap						install
 rsync						install
 rsyslog						install
 rtkit						install
-ruby-full					install
 ruby1.8						install
-ruby1.8-dev					install
-ruby1.8-full					install
+ruby1.9.1					install
 rubygems					install
 samba-common					install
 samba-common-bin				install
@@ -1524,6 +1599,7 @@ sensible-utils					install
 sessioninstaller				install
 sgml-base					install
 sgml-data					install
+sgmlspl						install
 shared-mime-info				install
 shotwell					install
 simple-scan					install
@@ -1533,6 +1609,7 @@ software-center					install
 software-properties-common			install
 software-properties-gtk				install
 sound-theme-freedesktop				install
+sp						install
 speech-dispatcher				install
 splix						install
 sqlite3						install
@@ -1550,6 +1627,7 @@ system-config-printer-udev			install
 sysv-rc						install
 sysvinit-utils					install
 tar						install
+tcl						install
 tcl8.5						install
 tcpd						install
 tcpdump						install
@@ -1562,10 +1640,36 @@ telepathy-logger				install
 telepathy-mission-control-5			install
 telepathy-salut					install
 telnet						install
+tex-common					install
+texlive						install
+texlive-base					install
+texlive-bibtex-extra				install
+texlive-binaries				install
+texlive-common					install
+texlive-doc-base				install
+texlive-extra-utils				install
+texlive-font-utils				install
+texlive-fonts-recommended			install
+texlive-fonts-recommended-doc			install
+texlive-generic-recommended			install
+texlive-latex-base				install
+texlive-latex-base-doc				install
+texlive-latex-extra				install
+texlive-latex-extra-doc				install
+texlive-latex-recommended			install
+texlive-latex-recommended-doc			install
+texlive-luatex					install
+texlive-math-extra				install
+texlive-pictures				install
+texlive-pictures-doc				install
+texlive-pstricks				install
+texlive-pstricks-doc				install
 thunderbird					install
 thunderbird-globalmenu				install
 thunderbird-gnome-support			install
 time						install
+tipa						install
+tk						install
 tk8.5						install
 tmux						install
 tomboy						install
@@ -1630,6 +1734,7 @@ unity-lens-files				install
 unity-lens-music				install
 unity-scope-musicstores				install
 unity-services					install
+unixodbc					install
 uno-libs3					install
 unzip						install
 update-inetd					install
@@ -1637,6 +1742,7 @@ update-manager					install
 update-manager-core				install
 update-notifier					install
 update-notifier-common				install
+update-sun-jre					install
 upower						install
 upstart						install
 ure						install
@@ -1688,6 +1794,7 @@ x11proto-xext-dev				install
 x11proto-xinerama-dev				install
 xauth						install
 xbitmaps					install
+xclip						install
 xcursor-themes					install
 xdg-user-dirs					install
 xdg-user-dirs-gtk				install
@@ -1702,6 +1809,7 @@ xinit						install
 xinput						install
 xkb-data					install
 xml-core					install
+xmlto						install
 xorg						install
 xorg-docs-core					install
 xorg-sgml-doctools				install
@@ -1737,6 +1845,7 @@ xserver-xorg-video-tdfx				install
 xserver-xorg-video-trident			install
 xserver-xorg-video-vesa				install
 xserver-xorg-video-vmware			install
+xsltproc					install
 xterm						install
 xtrans-dev					install
 xul-ext-ubufox					install
@@ -1753,3 +1862,4 @@ zenity-common					install
 zip						install
 zlib1g						install
 zlib1g-dev					install
+zsh						install
