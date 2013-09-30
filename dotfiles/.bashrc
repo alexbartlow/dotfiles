@@ -60,7 +60,7 @@ fi
 . ~/.bash_aliases
 
 if [ "$color_prompt" = yes ]; then
-  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb``gs`\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
+  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb`(`gs`)\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -118,7 +118,9 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:$HOME/.n/bin # Add RVM to PATH for scripting
+PATH=$PATH:./node_modules/.bin
+export NODE_MODULES=$HOME/.npm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
