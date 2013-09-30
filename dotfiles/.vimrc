@@ -32,6 +32,10 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru
 
 au BufRead,BufNewFile {*.md,*.txt,*.asc} set wrap linebreak nolist tw=72
 au BufRead,BufNewFile {*.md,*.txt,*.asc} setlocal spell spelllang=en_us
+au BufRead,BufNewFile {*.yml} set wrap linebreak nolist tw=72 filetype=text
+au BufRead,BufNewFile {*.yml} setlocal spell spelllang=en_us
+
+set colorcolumn=80
 
 map <Leader>1 :tabn 1<CR>
 map <Leader>2 :tabn 2<CR>
@@ -78,7 +82,17 @@ set wildmenu
 set wildmode=list:longest
 autocmd VimEnter * wincmd p
 set background=dark
-colorscheme all_hallows_eve
+colorscheme solarized
+
+function! ToggleBackground () 
+  if &background=='dark'
+    set background=light
+  else
+    set background=dark
+  endif
+endfunction
+
+map <Leader><F2> :call ToggleBackground() <CR>
 
 autocmd BufWinLeave * call clearmatches()
 
@@ -91,6 +105,8 @@ if exists(":Tabularize")
   vmap <Leader>a= :Tabularize /=><CR>
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>a\ :Tabularize /\|<CR>
+  vmap <Leader>a\ :Tabularize /\|<CR>
 endif
 
 map ,<C-b> :ConqueTermSplit bash<CR>

@@ -3,6 +3,13 @@
   url = git://github.com/kien/ctrlp.vim.git
 [submodule "dotfiles/.vim/bundle/vim-slim"]
   path = dotfiles/.vim/bundle/vim-slim
+  url = git://github.com/bbommarito/vim-slim.git
+[submodule "dotfiles/.vim/bundle/vim-ruby-refactoring"]
+	path = dotfiles/.vim/bundle/vim-ruby-refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "dotfiles/.vim/bundle/vim-matchit"]
+	path = dotfiles/.vim/bundle/vim-matchit
+	url = git://github.com/tsaleh/vim-matchit.git
   url = git://github.com/slim-template/vim-slim.git
 [submodule "dotfiles/.vim/bundle/vim-gitgutter"]
   path = dotfiles/.vim/bundle/vim-gitgutter
