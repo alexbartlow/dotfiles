@@ -69,6 +69,12 @@ map <Leader><F4> :TlistUpdate<CR>
 map <Leader><F5> :source ~/.vimrc<CR>
 map <C-/> ://<CR>
 
+map <C-y> "*y
+vmap <C-y> "*y
+map <C-Y> "*Y
+
+map <C-p> "*p
+
 let g:ctrlp_map = '<c-t>'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
