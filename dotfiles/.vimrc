@@ -87,6 +87,11 @@ function! RSpecCurrent()
 endfunction
 map <leader>r :call RSpecCurrent() <CR>
 command! RSpecCurrent call RSpecCurrent()
+map <C-y> "*y
+vmap <C-y> "*y
+map <C-Y> "*Y
+
+map <C-p> "*p
 
 let g:ctrlp_map = '<c-t>'
 
