@@ -8,6 +8,8 @@ set showmatch
 set incsearch
 set hlsearch
 
+set statusline=%t\ %{fugitive#statusline()}\ %h%m%r%y%=%c,%l/%L\ %P
+
 "set virtualedit=all
 
 set guioptions-=T
@@ -27,7 +29,7 @@ set backspace=indent,eol,start
 set guicursor=a:blinkon0
 set nocursorline
 filetype plugin indent on
-set wildignore=vendor/**,development/**,coverage/**
+set wildignore=vendor/**,development/**,coverage/**,doc/*
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Guardfile,config.ru} set ft=ruby
 
 au BufRead,BufNewFile {*.md,*.txt,*.asc} set wrap linebreak nolist tw=72
@@ -58,6 +60,10 @@ map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
 
 map <Leader>, :NERDTreeToggle<CR>
+
+
+map <Leader>T <Plug>RubyTestRun
+map <Leader>F <Plug>RubyTestFileRun
 map <Leader>t :CtrlP<CR>
 imap jf <ESC>
 map! ,e <ESC>f>a
@@ -69,11 +75,25 @@ map <Leader><F4> :TlistUpdate<CR>
 map <Leader><F5> :source ~/.vimrc<CR>
 map <C-/> ://<CR>
 
+function! RSpecFile()
+  execute("!clear && rvm use rx && bundle exec spring rspec " . expand("%p"))
+endfunction
+
+map <leader>R :call RSpecFile() <CR>
+command! RSpecFile call RSpecFile()
+
+function! RSpecCurrent()
+    execute("!clear && rvm use rx && bundle exec spring rspec " . expand("%p") . ":" . line("."))
+endfunction
+map <leader>r :call RSpecCurrent() <CR>
+command! RSpecCurrent call RSpecCurrent()
+
 let g:ctrlp_map = '<c-t>'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/doc/*  " MacOSX/Linux
 
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|doc$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 nnoremap Y y$
 map <Leader>I gg=G``<cr>
@@ -82,7 +102,7 @@ set wildmenu
 set wildmode=list:longest
 autocmd VimEnter * wincmd p
 set background=dark
-colorscheme solarized
+colorscheme all_hallows_eve
 
 function! ToggleBackground () 
   if &background=='dark'
