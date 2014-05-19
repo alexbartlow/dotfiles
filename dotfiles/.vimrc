@@ -99,6 +99,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/doc/*  " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|doc$'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_working_path_mode ='ra'
 
 nnoremap Y y$
 map <Leader>I gg=G``<cr>

@@ -124,7 +124,7 @@ PATH=$PATH:./node_modules/.bin
 export NODE_MODULES=$HOME/.npm
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin"
 
 export RUBY_HEAP_MIN_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
