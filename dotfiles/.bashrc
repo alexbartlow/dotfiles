@@ -1,8 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-set -o vi
-export TERM='xterm-256color'
+export TERM='screen-256color'
+
+which brew && source "$(brew --prefix)/etc/bash_completion"
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -29,41 +30,13 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-    xterm-256color) color_prompt=yes;;
-esac
+color_prompt=yes
 
-case "$COLORTERM" in
-  gnome-terminal) color_prompt=yes;;
-esac
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+GIT_PS1_SHOWDIRTYSTATE='1'
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-[[ -s "$rvm_path/scripts/rvm" ]] && source "$rvm_path/scripts/rvm"
-
-. ~/.bash_aliases
-
-if [ "$color_prompt" = yes ]; then
-  PS1='[\e[1;33m\W\e[m] \e[1;32m`cb`(`gs`)\e[m \e[1;34m`$RVM && rvm current`\e[m \e[1;35m`[[ -f $BUNDLE_GEMFILE ]] && echo $(basename ${BUNDLE_GEMFILE%/*})`\e[m\n'
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+PS1='[\e[1;33m\W\e[m]$(__git_ps1)\n'
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -117,9 +90,6 @@ fi
 
 [[ -s "$HOME/.scm_breeze/scm_breeze.sh" ]] && . "$HOME/.scm_breeze/scm_breeze.sh"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.n/bin # Add RVM to PATH for scripting
 PATH=$PATH:./node_modules/.bin
 export NODE_MODULES=$HOME/.npm
 
@@ -130,3 +100,11 @@ export RUBY_HEAP_MIN_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_FREE_MIN=100000
 
+# Android Development Stuff:
+
+export PATH="$PATH:$HOME/android-sdk/sdk/tools"
+export PATH="$PATH:$HOME/android-sdk/sdk/platform-tools"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PROMPT_COMMAND='echo -ne "\033]0;$(basename $PWD)\007"'

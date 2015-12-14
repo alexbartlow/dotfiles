@@ -1,0 +1,3 @@
+
+let g:airline#extensions#whitespace#show_message = 1
+let g:airline_powerline_fonts = 1
