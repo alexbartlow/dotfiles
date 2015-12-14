@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+Dir.glob("tilde/*", File::FNM_DOTMATCH).each do |source|
+  next if File.basename(source) =~ /\A\.+\Z/
+  source = File.expand_path("./#{source}")
+  target = File.expand_path("~/#{File.basename(source)}")
+  if File.symlink?(target)
+    puts "Symlink exists: #{target}"
+  else
+    if File.exists?(target)
+      puts "ERROR: #{target} exists!"
+    else
+      puts "Creating Symlink for: #{source}"
+      File.symlink(source, target)
+    end
+  end
+end
