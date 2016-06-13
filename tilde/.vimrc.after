@@ -3,6 +3,16 @@ colorscheme all_hallows_eve
 nmap <leader>t :CtrlPClearCache<cr>:CtrlP<cr>
 
 au FileType javascript setl sw=2 sts=2 ts=2 et
+set relativenumber
 set clipboard=unnamed,unnamedplus
 imap <C-Space> <Esc>
 nnoremap \ :noh<CR>
+
+nnoremap <C-tab> :tabnext<CR>
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+
+map <C-p> :CtrlPBuffer<CR>
+
+

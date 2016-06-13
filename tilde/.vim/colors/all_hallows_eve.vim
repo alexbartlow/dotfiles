@@ -103,7 +103,7 @@ if has("gui_running")
   hi  cssBraces                     guifg=NONE     guibg=NONE     gui=NONE
 else
   hi  Cursor                        ctermfg=NONE  ctermbg=255   cterm=NONE
-  hi  Visual                        ctermfg=NONE  ctermbg=238    cterm=NONE
+  hi  Visual                        ctermfg=NONE  ctermbg=19    cterm=NONE
   hi  CursorLine                    ctermfg=NONE  ctermbg=NONE  cterm=NONE
   hi  CursorColumn                  ctermfg=NONE  ctermbg=NONE  cterm=NONE
   hi  LineNr                        ctermfg=240   ctermbg=16    cterm=NONE

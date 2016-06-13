@@ -7,17 +7,19 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'bling/vim-airline'
+Bundle 'mtscout6/vim-cjsx'
+
+Bundle 'majutsushi/tagbar'
 
 " file tree
 Bundle 'scrooloose/nerdtree'
+Bundle 'rhysd/vim-crystal'
 " file tree and tabs interaction
 Bundle 'jistr/vim-nerdtree-tabs'
 " commenting
 Bundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 Bundle 'kien/ctrlp.vim'
-" popup completion menu
-Bundle 'AutoComplPop'
 " tags list navigation
 Bundle 'taglist.vim'
 " yank history

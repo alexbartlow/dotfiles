@@ -1,4 +1,4 @@
-set -g set-titles-string '#h #S ● #I #W'
+set -g set-titles-string '#S ● #I #W'
 # use the powerline patched font variant of the theme, possible values are:
 #   - default
 #   - powerline
@@ -93,7 +93,7 @@ tmux_conf_new_panes_retain_current_path=true
 # prompt for session name when creating a new session, possible values are:
 #   - true
 #   - false
-tmux_conf_new_session_prompt=false
+tmux_conf_new_session_prompt=true
 #tmux_conf_new_session_prompt=true
 
 # if you're running tmux within iTerm2
@@ -112,3 +112,5 @@ tmux_conf_new_session_prompt=false
 bind-key C-l list-sessions
 bind-key C-f choose-session
 bind-key C-b last-window
+unbind C-a
+
