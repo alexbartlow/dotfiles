@@ -8,10 +8,10 @@ set clipboard=unnamed,unnamedplus
 imap <C-Space> <Esc>
 nnoremap \ :noh<CR>
 
-nnoremap <C-tab> :tabnext<CR>
-nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-t> :tabnew<CR>
-nnoremap <C-w> :tabclose<CR>
+nnoremap <C-x> :tabclose<CR>
 
 map <C-p> :CtrlPBuffer<CR>
 
