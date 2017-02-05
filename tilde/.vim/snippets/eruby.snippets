@@ -1,2 +1,16 @@
 snippet = <%= .. %>
-	<%= ${1} %>
+	<%= ${1} %>${2}
+
+snippet end
+	<% end %>${0}
+
+snippet %
+	<% ${1} %>${0}
+
+snippet ead
+	<% ${1}.each do |${2}| %>
+		${0}
+	<% end %>
+
+snippet term
+	<%= terminology("${1}") %>${0}

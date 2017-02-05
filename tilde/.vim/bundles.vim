@@ -29,7 +29,9 @@ Bundle 'tpope/vim-fugitive'
 " syntax checking on save
 Bundle 'scrooloose/syntastic'
 " TextMate-style snippets
-Bundle 'msanders/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
 " manipulation of surraunding parens, quotes, etc.
 Bundle 'tpope/vim-surround'
 " vertical alignment tool
