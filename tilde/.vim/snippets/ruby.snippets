@@ -22,3 +22,8 @@ snippet aft
 	after :${1:each} do
 		${2}
 	end
+snippet ase
+	expect(${1}).to eql(${2})
+
+snippet asc
+	expect{ ${1} }.to change{ ${2} }.by(${3:1})

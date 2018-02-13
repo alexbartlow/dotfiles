@@ -2,6 +2,7 @@ colorscheme all_hallows_eve
 " remap TListToggle, I never use it and it conflicts with my muscle memory
 nmap <leader>t :CtrlPClearCache<cr>:CtrlP<cr>
 
+au BufRead *.es6 set filetype=javascript
 au FileType javascript setl sw=2 sts=2 ts=2 et
 set relativenumber
 set clipboard=unnamed,unnamedplus
@@ -14,5 +15,13 @@ nnoremap <C-t> :tabnew<CR>
 nnoremap <C-x> :tabclose<CR>
 
 map <C-p> :CtrlPBuffer<CR>
+map <Leader><Leader> :Files<CR>
+map <Leader>s :GFiles?<CR>
+map <Leader>p :GFiles<CR>
 
-
+let g:vimrubocop_config = '/Users/alex/Documents/projects/aha/aha-app/.rubocop.yml'
+let g:vimrubocop_keymap = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+nmap <Leader>r :RuboCop<CR>
+nmap <Leader>R :call RunCurrentSpecFile()<CR>

@@ -26,3 +26,10 @@ endif
 
 set ts=2 sw=2 clipboard=unnamed
 au BufRead,BufNewFile *.cjsx set ft=coffee
+set cul!
+set lazyredraw
+set number
+set norelativenumber
+set nocursorline
+let loaded_matchparen = 1
+

@@ -1,29 +1,34 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.fzf
 call vundle#rc()
 
 " plugin management
 Bundle 'gmarik/vundle'
 
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 Bundle 'bling/vim-airline'
 Bundle 'mtscout6/vim-cjsx'
+
+" Bundle 'ngmy/vim-rubocop'
 
 Bundle 'majutsushi/tagbar'
 
 " file tree
 Bundle 'scrooloose/nerdtree'
-Bundle 'rhysd/vim-crystal'
+" Bundle 'rhysd/vim-crystal'
 " file tree and tabs interaction
 Bundle 'jistr/vim-nerdtree-tabs'
 " commenting
 Bundle 'scrooloose/nerdcommenter'
 " fuzzy file open
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 " tags list navigation
 Bundle 'taglist.vim'
 " yank history
-Bundle 'YankRing.vim'
+" Bundle 'YankRing.vim'
 " git integration
 Bundle 'tpope/vim-fugitive'
 " syntax checking on save
@@ -37,7 +42,7 @@ Bundle 'tpope/vim-surround'
 " vertical alignment tool
 Bundle 'tsaleh/vim-align'
 " 'ag' searching integration
-Bundle 'rking/ag.vim'
+" Bundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
 Bundle 'austintaylor/vim-indentobject'
 " global search & replace
@@ -47,13 +52,13 @@ Bundle 'astrails/vim-powerline'
 " plugin for resolving three-way merge conflicts
 Bundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
-Bundle 'Indent-Guides'
+" Bundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
 Bundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 " calendar, duh!
-Bundle 'calendar.vim--Matsumoto'
+" Bundle 'calendar.vim--Matsumoto'
 " A Narrow Region Plugin (similar to Emacs)
 Bundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
