@@ -1,16 +1,25 @@
 #!/usr/bin/env ruby
 
-Dir.glob("tilde/*", File::FNM_DOTMATCH).each do |source|
+files = []
+files.push Dir.glob("tilde/**", File::FNM_DOTMATCH)
+
+files << "tilde/bin/mux"
+
+files.flatten.each do |source|
   next if File.basename(source) =~ /\A\.+\Z/
   source = File.expand_path("./#{source}")
-  target = File.expand_path("~/#{File.basename(source)}")
+  target = File.expand_path(source.gsub(/.*tilde/, "~"))
   if File.symlink?(target)
     puts "Symlink exists: #{target}"
   else
-    if File.exists?(target)
+    if File.directory?(source)
+      puts "making directory #{source}"
+      `mkdir -p #{target}`
+    elsif File.exists?(target)
       puts "ERROR: #{target} exists!"
     else
       puts "Creating Symlink for: #{source}"
+      puts target
       File.symlink(source, target)
     end
   end

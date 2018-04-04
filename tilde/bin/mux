@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+# if in a tmux session, disconnect
+def disconnect
+  exec "tmux detach-client"
+end
+
+if ENV['TMUX']
+  disconnect
+end
+
+cdir=File.basename(`git rev-parse --show-toplevel`)
+
+if $?.to_i > 0
+  # not a git repo, take the basename of the CWD
+  cdir = File.basename(ENV['PWD'])
+end
+
+sessions = `tmux list-sessions -F '\#{session_name}, \#{session_attached,yes,}'`.each_line.map{|line| line.split(',')}
+
+sessions = Hash[sessions]
+cdir = cdir.chomp
+
+if sessions[cdir].nil?
+  # new session
+  exec "tmux new -s #{cdir}"
+else
+  # session already running, attach to it
+  exec "tmux a -d -t #{cdir}"
+end
+

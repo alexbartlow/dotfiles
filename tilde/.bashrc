@@ -4,6 +4,8 @@
 export TERM='screen-256color'
 
 which brew && source "$(brew --prefix)/etc/bash_completion"
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
